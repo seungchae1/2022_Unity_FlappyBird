@@ -5,6 +5,7 @@ using UnityEngine;
 public class BirdJomp : MonoBehaviour
 {
     Rigidbody2D rb;
+    public float jumpPower;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class BirdJomp : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            rb.velocity = Vector2.up * 3; //Vector2는 (x,y)로 나타내는 2차원 좌표 //Vector.up은 (0,1)
+            rb.velocity = Vector2.up * jumpPower; //Vector2는 (x,y)로 나타내는 2차원 좌표 //Vector.up은 (0,1)
         }
     }
 }
