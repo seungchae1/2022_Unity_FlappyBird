@@ -19,9 +19,10 @@ public class MakePipe : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > randomTime)
         {
-            Instantiate(pipe);
+            GameObject newpipe = Instantiate(pipe);
+            newpipe.transform.position = new Vector3(6, Random.Range(-1.5f, -7.0f),0);
             timer = 0;
-            randomTime = Random.Range(1.0f, 3.5f);
+            randomTime = Random.Range(2.0f, 3.5f);
         }
     }
 }
