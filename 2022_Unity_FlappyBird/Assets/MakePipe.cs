@@ -23,6 +23,7 @@ public class MakePipe : MonoBehaviour
             newpipe.transform.position = new Vector3(6, Random.Range(-1.5f, -7.0f),0);
             timer = 0;
             randomTime = Random.Range(2.0f, 3.5f);
+            Destroy(newpipe, 7.0f);
         }
     }
 }
