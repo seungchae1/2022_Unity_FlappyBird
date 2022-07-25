@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BirdJomp : MonoBehaviour
 {
@@ -20,5 +21,9 @@ public class BirdJomp : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpPower; //Vector2는 (x,y)로 나타내는 2차원 좌표 //Vector.up은 (0,1)
         }
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        SceneManager.LoadScene("GameOverScene");
     }
 }
